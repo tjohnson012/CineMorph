@@ -201,11 +201,19 @@ async def get_presets():
 @router.post("/export")
 async def export_image(request: ExportRequest):
     """Export an image in various professional formats"""
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        response = await client.get(str(request.image_url))
-        response.raise_for_status()
+    try:
+        async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
+            response = await client.get(str(request.image_url))
+            response.raise_for_status()
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(400, f"Failed to fetch image: {e.response.status_code}")
+    except Exception as e:
+        raise HTTPException(400, f"Failed to fetch image: {str(e)}")
 
-    img = Image.open(BytesIO(response.content))
+    try:
+        img = Image.open(BytesIO(response.content))
+    except Exception as e:
+        raise HTTPException(400, f"Failed to process image: {str(e)}")
 
     output = BytesIO()
     filename = "cinemorph_export"
