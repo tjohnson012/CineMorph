@@ -7,6 +7,8 @@ from app.models import CinematographyDNA, CameraParams, LightingParams, ColorPar
 class FIBOClient:
     def __init__(self):
         self.settings = get_settings()
+        if not self.settings.fal_api_key:
+            raise ValueError("FAL_API_KEY environment variable is not set")
         self.base_url = "https://fal.run/bria/fibo/generate"
         self.headers = {
             "Authorization": f"Key {self.settings.fal_api_key}",
