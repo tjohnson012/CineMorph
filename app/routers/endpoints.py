@@ -201,17 +201,32 @@ async def get_presets():
 @router.post("/export")
 async def export_image(request: ExportRequest):
     """Export an image in various professional formats"""
-    try:
-        async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
-            response = await client.get(str(request.image_url))
-            response.raise_for_status()
-    except httpx.HTTPStatusError as e:
-        raise HTTPException(400, f"Failed to fetch image: {e.response.status_code}")
-    except Exception as e:
-        raise HTTPException(400, f"Failed to fetch image: {str(e)}")
+    import base64
+
+    image_url = str(request.image_url)
+
+    # Handle data URIs (base64 encoded images)
+    if image_url.startswith("data:"):
+        try:
+            # Parse data URI: data:image/png;base64,<data>
+            header, data = image_url.split(",", 1)
+            image_data = base64.b64decode(data)
+        except Exception as e:
+            raise HTTPException(400, f"Invalid data URI: {str(e)}")
+    else:
+        # Fetch from URL
+        try:
+            async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
+                response = await client.get(image_url)
+                response.raise_for_status()
+                image_data = response.content
+        except httpx.HTTPStatusError as e:
+            raise HTTPException(400, f"Failed to fetch image: {e.response.status_code}")
+        except Exception as e:
+            raise HTTPException(400, f"Failed to fetch image: {str(e)}")
 
     try:
-        img = Image.open(BytesIO(response.content))
+        img = Image.open(BytesIO(image_data))
     except Exception as e:
         raise HTTPException(400, f"Failed to process image: {str(e)}")
 
