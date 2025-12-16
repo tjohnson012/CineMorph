@@ -1,0 +1,29 @@
+{
+  "description": "Christopher Nolan's visual approach - IMAX scale, practical lighting, blue-orange contrast, deep blacks",
+  "signature_traits": [
+    "IMAX aspect ratio",
+    "practical lighting",
+    "blue-orange color contrast",
+    "deep rich blacks",
+    "architectural framing"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 5600,
+      "style": "practical",
+      "intensity": 0.7,
+      "direction": "natural"
+    },
+    "color": {
+      "palette": ["blue", "orange", "black"],
+      "saturation": 0.5,
+      "contrast": 0.75,
+      "mood": "epic",
+      "grade": "rich"
+    },
+    "atmosphere": {
+      "haze": 0.1,
+      "environment": "mixed"
+    }
+  }
+}

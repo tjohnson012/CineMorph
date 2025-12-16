@@ -1,0 +1,31 @@
+{
+  "description": "Denis Villeneuve's epic scope - vast landscapes, muted earth tones, anamorphic lenses, atmospheric depth",
+  "signature_traits": [
+    "anamorphic widescreen",
+    "muted earth tones",
+    "vast negative space",
+    "environmental scale",
+    "atmospheric haze"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 6000,
+      "style": "natural",
+      "intensity": 0.55,
+      "direction": "back"
+    },
+    "color": {
+      "palette": ["orange", "teal", "brown", "grey"],
+      "saturation": 0.35,
+      "contrast": 0.55,
+      "mood": "contemplative",
+      "grade": "desaturated"
+    },
+    "atmosphere": {
+      "weather": "hazy",
+      "haze": 0.4,
+      "particles": "dust",
+      "environment": "exterior"
+    }
+  }
+}

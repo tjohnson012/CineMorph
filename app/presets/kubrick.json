@@ -1,0 +1,27 @@
+{
+  "description": "Stanley Kubrick's signature style - symmetrical compositions, wide angle lenses, cold lighting with clinical precision",
+  "signature_traits": [
+    "one-point perspective",
+    "symmetrical framing",
+    "wide angle distortion",
+    "cold color temperature",
+    "high contrast"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 4500,
+      "style": "practical",
+      "intensity": 0.6
+    },
+    "color": {
+      "palette": ["white", "blue", "grey"],
+      "saturation": 0.4,
+      "contrast": 0.7,
+      "mood": "tense",
+      "grade": "cool"
+    },
+    "atmosphere": {
+      "haze": 0.1
+    }
+  }
+}

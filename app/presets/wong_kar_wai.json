@@ -1,0 +1,32 @@
+{
+  "description": "Wong Kar-wai's romantic melancholy - neon-soaked nights, motion blur, saturated colors, intimate framings",
+  "signature_traits": [
+    "neon color palette",
+    "step-printed motion blur",
+    "cramped intimate spaces",
+    "reflections and glass",
+    "saturated night scenes"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 3200,
+      "style": "neon",
+      "intensity": 0.6,
+      "direction": "mixed",
+      "time_of_day": "night"
+    },
+    "color": {
+      "palette": ["red", "green", "blue", "gold"],
+      "saturation": 0.85,
+      "contrast": 0.6,
+      "mood": "melancholic",
+      "grade": "saturated"
+    },
+    "atmosphere": {
+      "weather": "rain",
+      "haze": 0.35,
+      "particles": "smoke",
+      "environment": "interior"
+    }
+  }
+}

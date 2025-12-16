@@ -1,0 +1,29 @@
+{
+  "description": "Quentin Tarantino's visual style - warm colors, trunk shots, low angles, saturated palette",
+  "signature_traits": [
+    "trunk shot perspective",
+    "warm saturated colors",
+    "low angle power shots",
+    "70s film grain aesthetic",
+    "high contrast shadows"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 3800,
+      "style": "dramatic",
+      "intensity": 0.8,
+      "direction": "side"
+    },
+    "color": {
+      "palette": ["amber", "red", "brown"],
+      "saturation": 0.75,
+      "contrast": 0.65,
+      "mood": "intense",
+      "grade": "warm"
+    },
+    "atmosphere": {
+      "particles": "dust",
+      "haze": 0.15
+    }
+  }
+}

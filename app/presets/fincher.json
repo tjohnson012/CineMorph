@@ -1,0 +1,30 @@
+{
+  "description": "David Fincher's visual language - desaturated tones, green-yellow tint, precise camera movement, dark atmospherics",
+  "signature_traits": [
+    "desaturated palette",
+    "sickly green undertones",
+    "low key lighting",
+    "deep shadows",
+    "clinical precision"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 4800,
+      "style": "low_key",
+      "intensity": 0.45,
+      "direction": "top"
+    },
+    "color": {
+      "palette": ["green", "yellow", "grey"],
+      "saturation": 0.3,
+      "contrast": 0.6,
+      "mood": "unsettling",
+      "grade": "bleach_bypass"
+    },
+    "atmosphere": {
+      "weather": "overcast",
+      "haze": 0.25,
+      "particles": "rain"
+    }
+  }
+}

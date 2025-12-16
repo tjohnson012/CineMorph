@@ -1,0 +1,29 @@
+{
+  "description": "Wes Anderson's distinctive aesthetic - pastel palette, rigid symmetry, flat compositions, whimsical precision",
+  "signature_traits": [
+    "pastel color palette",
+    "dead center symmetry",
+    "flat frontal compositions",
+    "dollhouse framing",
+    "storybook lighting"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 5200,
+      "style": "soft",
+      "intensity": 0.75,
+      "direction": "front"
+    },
+    "color": {
+      "palette": ["pink", "yellow", "teal", "cream"],
+      "saturation": 0.6,
+      "contrast": 0.45,
+      "mood": "whimsical",
+      "grade": "pastel"
+    },
+    "atmosphere": {
+      "weather": "clear",
+      "haze": 0.0
+    }
+  }
+}

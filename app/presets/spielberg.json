@@ -1,0 +1,30 @@
+{
+  "description": "Steven Spielberg's blockbuster aesthetic - lens flares, golden hour warmth, motivated lighting, emotional framing",
+  "signature_traits": [
+    "lens flares",
+    "golden hour lighting",
+    "backlighting silhouettes",
+    "motivated camera movement",
+    "awe-inspiring scale"
+  ],
+  "overrides": {
+    "lighting": {
+      "color_temp": 4200,
+      "style": "motivated",
+      "intensity": 0.8,
+      "direction": "back",
+      "time_of_day": "golden_hour"
+    },
+    "color": {
+      "palette": ["gold", "amber", "blue"],
+      "saturation": 0.55,
+      "contrast": 0.5,
+      "mood": "wonder",
+      "grade": "warm"
+    },
+    "atmosphere": {
+      "haze": 0.2,
+      "particles": "dust"
+    }
+  }
+}
