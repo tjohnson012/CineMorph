@@ -121,7 +121,7 @@ class ExportFormat(str, Enum):
 
 
 class ExportRequest(BaseModel):
-    image_url: HttpUrl
+    image_url: str  # Changed from HttpUrl to allow fal.ai URLs
     format: ExportFormat = ExportFormat.PNG
     quality: int = Field(default=95, ge=1, le=100)
 
